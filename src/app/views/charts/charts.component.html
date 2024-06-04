@@ -1,0 +1,72 @@
+<c-row>
+  <c-col xs="12">
+    <app-docs-callout href="charts">
+      Vista del desarrollo empresarial e inscripciones por sede
+      <br>
+    </app-docs-callout>
+  </c-col>
+  <c-col xs="12" lg="6">
+    <c-card class="mb-4">
+      <c-card-header>
+        Gráfico de Barras
+      </c-card-header>
+      <c-card-body>
+        <c-chart type="bar" [data]="chartBarData" [options]="options" />
+      </c-card-body>
+    </c-card>
+  </c-col>
+  <c-col xs="12" lg="6">
+    <c-card class="mb-4">
+      <c-card-header>
+        Gráfico de líneas
+      </c-card-header>
+      <c-card-body>
+        <c-chart type="line" [data]="chartLineData" [options]="options" />
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>
+<c-row>
+  <c-col xs="12" lg="6">
+    <c-card class="mb-4">
+      <c-card-header>
+      Gráfico de Dona
+      </c-card-header>
+      <c-card-body>
+        <c-chart type="doughnut" [data]="chartDoughnutData" [options]="options" />
+      </c-card-body>
+    </c-card>
+  </c-col>
+  <c-col xs="12" lg="6">
+    <c-card class="mb-4">
+      <c-card-header>
+        Gráfico de Torta
+      </c-card-header>
+      <c-card-body>
+        <c-chart type="pie" [data]="chartPieData" [options]="options" />
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>
+<c-row>
+  <c-col xs="12" lg="6">
+    <c-card class="mb-4">
+      <c-card-header>
+        Grafico Polarizado
+      </c-card-header>
+      <c-card-body>
+        <c-chart type="polarArea" [data]="chartPolarAreaData" [options]="options" />
+      </c-card-body>
+    </c-card>
+  </c-col>
+  <c-col xs="12" lg="6">
+    <c-card class="mb-4">
+      <c-card-header>
+        Gráfico de Radar
+      </c-card-header>
+      <c-card-body>
+        <c-chart type="radar" [data]="chartRadarData" [options]="options" />
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>

@@ -1,0 +1,72 @@
+<c-row>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header ngPreserveWhitespaces>
+        <small>Lanzamiento de</small> <strong> Proyectos</strong>
+      </c-card-header>
+      <c-card-body>
+        <p class="text-body-secondary small">
+          Este apartado permite lanzar un proyecto para programa, indicando si el mismo ha sido revalidado o no.
+        </p>
+        <app-docs-example href="forms/validation">
+
+          <form #customStylesForm="ngForm"
+                (ngSubmit)="onSubmit1()"
+                [validated]="customStylesValidated"
+                cForm
+                class="row g-3 needs-validation"
+          >
+            <c-col md="4">
+              <label cLabel for="projectcase">Tipo de proyecto</label>
+              <select cSelect id="projectcase" required>
+                <option>Diplomado</option>
+              </select>
+            </c-col>
+            <c-col md="4">
+              <label cLabel for="setheadquarter">Sede</label>
+              <select cSelect id="setheadquarter" required>
+                <option>ESAM SUCRE 2</option>
+              </select>
+            </c-col>
+            <c-col md="4">
+              <label cLabel for="Revalidate">Revalidado</label>
+              <select cSelect id="Revalidate" required>
+                <option value="">...</option>
+                <option>No</option>
+                </select>
+            </c-col>
+            <c-col md="6">
+              <label cLabel for="projecttittle">Título del proyecto</label>
+              <select cSelect id="projecttittle" required>
+                <option value="">Diplomado de educación superior con tecnologías de actualización digital</option>
+              </select>
+            </c-col>
+            <c-col md="3">
+              <label cLabel for="state">Estado</label>
+              <select cSelect id="state" required>
+                <option value="">Verificado y aprobado</option>
+              </select>
+            </c-col>
+            <c-col md="3">
+              <label cLabel for="area">Área</label>
+              <select cSelect id="area" required>
+                <option>Ingeniería</option>
+              </select>
+            </c-col>
+            <c-col xs="12">
+              <c-form-check>
+                <input cFormCheckInput id="invalidCheck" name="invalidCheck" required type="checkbox" />
+                <label cFormCheckLabel for="invalidCheck">"El presente proyecto se ha validado y aprobado para el lanzamiento".</label>
+              </c-form-check>
+              <c-form-feedback [valid]="false">Debe indicar si el proyecto cumple con todas las características.</c-form-feedback>
+            </c-col>
+            <c-col xs="12">
+              <button cButton class="me-1" color="secondary" type="submit">
+                Lanzar
+              </button>
+            </c-col>
+          </form>
+        </app-docs-example>
+      </c-card-body>
+    </c-card>
+  </c-col>

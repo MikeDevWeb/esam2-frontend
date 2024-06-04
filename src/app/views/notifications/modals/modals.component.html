@@ -1,0 +1,144 @@
+<c-row>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header ngPreserveWhitespaces>
+        <strong>Acerca de Nosotros... </strong>
+      </c-card-header>
+      <c-card-body class="fluid">
+
+        <!-- <p class="text-body-secondary small">
+          Add <code>alignment=&#34;center&#34;</code> to <code>&lt;c-modal&gt;</code> to
+          vertically center the modal.
+        </p> -->
+          <ng-container  *ngTemplateOutlet="mision" />
+
+          <ng-container *ngTemplateOutlet="vision" />
+
+          <ng-container *ngTemplateOutlet="trayectoria" />
+
+          <ng-container *ngTemplateOutlet="sede" />
+      </c-card-body>
+
+    </c-card>
+  </c-col>
+</c-row>
+
+<ng-template #mision>
+  <button class="m-1" [cModalToggle]="mision.id" cButton>Misión</button>
+  <c-modal #mision
+           [scrollable]="true"
+           alignment="center"
+           id="mision">
+    <c-modal-header>
+      <h5 cModalTitle>Misión</h5>
+      <button [cModalToggle]="mision.id" cButtonClose></button>
+    </c-modal-header>
+    <c-modal-body>
+      <p>
+        This is some placeholder content to show a vertically centered modal. We've added some extra copy here to show
+        how vertically centering the modal works when combined with scrollable modals. We also use some repeated line
+        breaks to quickly extend the height of the content, thereby triggering the scrolling. When content becomes
+        longer than the predefined max-height of modal, content will be cropped and scrollable within the modal.
+      </p>
+      <br><br><br><br><br><br><br><br><br><br>
+      <p>Just like that.</p>
+    </c-modal-body>
+    <c-modal-footer>
+      <button [cModalToggle]="mision.id" cButton color="secondary">
+        Volver
+      </button>
+      <button cButton color="primary">Entendido</button>
+    </c-modal-footer>
+  </c-modal>
+</ng-template>
+
+
+<ng-template #vision>
+  <button class="m-1" [cModalToggle]="vision.id" cButton>Visión</button>
+  <c-modal #vision
+           [scrollable]="true"
+           alignment="center"
+           id="vision">
+    <c-modal-header>
+      <h5 cModalTitle>Visión</h5>
+      <button [cModalToggle]="vision.id" cButtonClose></button>
+    </c-modal-header>
+    <c-modal-body>
+      <p>
+        This is some placeholder content to show a vertically centered modal. We've added some extra copy here to show
+        how vertically centering the modal works when combined with scrollable modals. We also use some repeated line
+        breaks to quickly extend the height of the content, thereby triggering the scrolling. When content becomes
+        longer than the predefined max-height of modal, content will be cropped and scrollable within the modal.
+      </p>
+      <br><br><br><br><br><br><br><br><br><br>
+      <p>Just like that.</p>
+    </c-modal-body>
+    <c-modal-footer>
+      <button [cModalToggle]="vision.id" cButton color="secondary">
+        Volver
+      </button>
+      <button cButton color="primary">Entendido</button>
+    </c-modal-footer>
+  </c-modal>
+</ng-template>
+
+<ng-template #trayectoria>
+  <button class="m-1" [cModalToggle]="trayectoria.id" cButton>Misión</button>
+  <c-modal #trayectoria
+           [scrollable]="true"
+           alignment="center"
+           id="trayectoria">
+    <c-modal-header>
+      <h5 cModalTitle>Modal title</h5>
+      <button [cModalToggle]="trayectoria.id" cButtonClose></button>
+    </c-modal-header>
+    <c-modal-body>
+      <p>
+        This is some placeholder content to show a vertically centered modal. We've added some extra copy here to show
+        how vertically centering the modal works when combined with scrollable modals. We also use some repeated line
+        breaks to quickly extend the height of the content, thereby triggering the scrolling. When content becomes
+        longer than the predefined max-height of modal, content will be cropped and scrollable within the modal.
+      </p>
+      <br><br><br><br><br><br><br><br><br><br>
+      <p>Just like that.</p>
+    </c-modal-body>
+    <c-modal-footer>
+      <button [cModalToggle]="trayectoria.id" cButton color="secondary">
+        Close
+      </button>
+      <button cButton color="primary">Understood</button>
+    </c-modal-footer>
+  </c-modal>
+</ng-template>
+
+<ng-template #sede>
+  <button class="m-1" [cModalToggle]="sede.id" cButton>Sede</button>
+  <c-modal #sede
+           [scrollable]="true"
+           alignment="center"
+           id="sede">
+    <c-modal-header>
+      <h5 cModalTitle>Modal title</h5>
+      <button [cModalToggle]="sede.id" cButtonClose></button>
+    </c-modal-header>
+    <c-modal-body>
+      <p>
+        This is some placeholder content to show a vertically centered modal. We've added some extra copy here to show
+        how vertically centering the modal works when combined with scrollable modals. We also use some repeated line
+        breaks to quickly extend the height of the content, thereby triggering the scrolling. When content becomes
+        longer than the predefined max-height of modal, content will be cropped and scrollable within the modal.
+      </p>
+      <br><br><br><br><br><br><br><br><br><br>
+      <p>Just like that.</p>
+    </c-modal-body>
+    <c-modal-footer>
+      <button [cModalToggle]="sede.id" cButton color="secondary">
+        Volver
+      </button>
+      <button cButton color="primary">Entendido</button>
+    </c-modal-footer>
+  </c-modal>
+</ng-template>
+
+
+

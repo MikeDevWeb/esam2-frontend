@@ -1,0 +1,86 @@
+<c-row>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header ngPreserveWhitespaces>
+        <small>Verificación de</small> <strong> Proyectos</strong>
+      </c-card-header>
+      <c-card-body>
+        <p class="text-body-secondary small">
+          Este apartado permite Validar un proyecto para programa luego de ser aprobado, indicando si el mismo ha sido revalidado o no.
+        </p>
+        <app-docs-example href="forms/validation">
+
+          <form #customStylesForm="ngForm"
+                (ngSubmit)="onSubmit1()"
+                [validated]="customStylesValidated"
+                cForm
+                class="row g-3 needs-validation"
+          >
+            <c-col md="4">
+              <label cLabel for="professorname">Nombre Docente</label>
+              <input cFormControl id="professorname" required type="text" pattern="[A-Za-z\s]+"/>
+            </c-col>
+            <c-col md="4">
+              <label cLabel for="setheadquarter">Sede</label>
+              <select cSelect id="setheadquarter" required>
+                <option>ESAM SUCRE 2</option>
+                <option>ESAM SUCRE 1</option>
+                <option>ESAM LATAM</option>
+                <option>CCA SUCRE</option>
+                <option>CCA TARIJA</option>
+                <option>CCA ISPI</option>
+                <option>CIBERKIDS</option>
+                <option>CYBERCORP</option>
+                <option>DBS SUCRE</option>
+                <option>FORMACION CONTINUA SUCRE</option>
+              </select>
+            </c-col>
+            <c-col md="4">
+              <label cLabel for="Revalidate">Firma y sello</label>
+              <select cSelect id="Revalidate" required>
+                <option value="">...</option>
+                <option>Si</option>
+                <option>No</option>
+                </select>
+            </c-col>
+            <c-col md="6">
+              <label cLabel for="projecttittle">Título del proyecto</label>
+              <select cSelect id="projecttittle" required>
+                <option value="">Diplomado de educación superior con tecnologías de actualización digital</option>
+              </select>
+            </c-col>
+            <c-col md="3">
+              <label cLabel for="state">Estado</label>
+              <select cSelect id="state" required>
+                <option value="">En desarrollo</option>
+                <option value="">Revisión académica local</option>
+                <option value="">Aprobado por área académica local</option>
+                <option value="">Revisión académica nacional</option>
+                <option value="">Aprobado por área académica nacional</option>
+                <option value="">Aprobado y verificado</option>
+              </select>
+            </c-col>
+            <c-col md="3">
+              <label cLabel for="area">Área</label>
+              <select cSelect id="area" required>
+                <option value="">A qué área pertenecerá?</option>
+              </select>
+            </c-col>
+            <c-col xs="9">
+              <c-form-check>
+                <input cFormCheckInput id="invalidCheck" name="invalidCheck" required type="checkbox" />
+                <label cFormCheckLabel for="invalidCheck">"Cumple para su validación como un proyecto".</label>
+              </c-form-check>
+              <c-form-feedback [valid]="false">Debe indicar si las correcciones cumplen con la verificación final para su lanzamiento.</c-form-feedback>
+            </c-col>
+            <c-col xs="12">
+              <button cButton class="me-1" color="secondary" type="submit">
+                Verificar
+              </button>
+            </c-col>
+          </form>
+        </app-docs-example>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>
